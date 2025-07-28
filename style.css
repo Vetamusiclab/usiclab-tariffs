@@ -1,0 +1,108 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=PT+Sans&display=swap');
+
+:root {
+  --orange: #FF6F00;
+  --lime: #6BCB77;
+  --black: #000000;
+  --white: #ffffff;
+  --sand: #FFE0B2;
+  --gray: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--white);
+  color: var(--gray);
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--orange);
+}
+
+header .subtitle {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.cards {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.card {
+  flex: 1;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: var(--black);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card .icon {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.card.basic {
+  background-color: var(--sand);
+}
+
+.card.progressive {
+  background-color: #E0F7FA;
+}
+
+.card.prive {
+  background-color: #F3E5F5;
+}
+
+.table {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.table h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--orange);
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+thead {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+td, th {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
