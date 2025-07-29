@@ -1,203 +1,245 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Тарифы MUSIC.LAB</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=PT+Sans&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --orange: #FF6F00;
-      --lime: #6BCB77;
-      --black: #000000;
-      --white: #FFFFFF;
-      --sand: #FFE0B2;
-      --text: #333333;
-      --gray-light: #F8F8F8;
-    }
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--white);
-      color: var(--text);
-    }
-    header {
-      background: var(--orange);
-      color: var(--white);
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-    }
-    .intro {
-      padding: 40px 20px;
-      background-color: var(--gray-light);
-      text-align: center;
-    }
-    .intro h2 {
-      color: var(--orange);
-      font-size: 1.8rem;
-    }
-    .intro p {
-      max-width: 800px;
-      margin: 20px auto;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
+<!DOCTYPE html><html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тарифы | Творческая Лаборатория Веты Гулливер</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --main-orange: #ff6f00;
+        --lime: #6bcb77;
+        --sand: #ffe0b2;
+        --black: #000000;
+        --white: #ffffff;
+        --text-dark: #333333;
+      }* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--white);
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: 20px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  header h1 {
+    font-size: 2.2em;
+    color: var(--main-orange);
+  }
+
+  header p {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.1em;
+    color: var(--text-dark);
+    margin-top: 10px;
+  }
+
+  .levels {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .card {
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    color: var(--text-dark);
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    font-size: 1em;
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  .basic { background-color: #fff5e6; }
+  .progressive { background-color: #e5fce8; }
+  .prive { background-color: #fce4ec; }
+
+  .quote {
+    background: var(--sand);
+    padding: 25px;
+    text-align: center;
+    border-radius: 20px;
+    font-style: italic;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: var(--main-orange);
+    color: var(--white);
+  }
+
+  td {
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  .choose-level {
+    background: var(--lime);
+    padding: 30px;
+    border-radius: 20px;
+    color: var(--black);
+    margin-bottom: 40px;
+  }
+
+  .choose-level h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+
+  .choose-level p {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em;
+  }
+
+  @media (max-width: 768px) {
     .levels {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      padding: 40px 20px;
-      background-color: var(--white);
     }
-    .card {
-      background-color: var(--sand);
-      border-left: 8px solid var(--orange);
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-    .card h3 {
-      margin-top: 0;
-      font-size: 1.5rem;
-    }
-    .card p {
-      font-size: 1rem;
-      line-height: 1.4;
-    }
-    .card.basic { border-left-color: #6BCB77; }
-    .card.progressive { border-left-color: #FF6F00; }
-    .card.prive { border-left-color: #000000; }
 
-    .tariff-table {
-      padding: 40px 20px;
-      background: var(--gray-light);
+    table, thead, tbody, th, td, tr {
+      display: block;
     }
-    .tariff-table h2 {
-      text-align: center;
-      color: var(--orange);
-      font-size: 1.6rem;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      font-size: 0.95rem;
-    }
-    table th, table td {
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: center;
-    }
-    table th {
-      background-color: var(--orange);
-      color: var(--white);
-    }
-    .how-to-choose {
-      padding: 40px 20px;
-      background: var(--lime);
-      color: var(--black);
-      text-align: center;
-    }
-    .how-to-choose h2 {
-      margin-bottom: 10px;
-      font-size: 1.6rem;
-    }
-    .how-to-choose p {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #777;
-    }
-  </style>
-</head>
-<body>
 
-  <header>
-    <h1>Тарифы музыкальной школы MUSIC.LAB</h1>
-  </header>
+    th {
+      display: none;
+    }
 
-  <section class="intro">
-    <h2>У каждого свой творческий путь... Но он всегда правильный!</h2>
-    <p>Мы создали три уровня наставников, чтобы каждый ученик — вне зависимости от возраста, целей или предыдущего опыта — мог найти себе подходящего педагога.  
-    <br><br>Все наши преподаватели — профессионалы, вдохновляющие и поддерживающие. Просто выберите тот ритм и уровень взаимодействия, который подходит именно вам!</p>
-  </section>
+    td {
+      position: relative;
+      padding-left: 50%;
+      text-align: left;
+      border: none;
+      border-bottom: 1px solid #ddd;
+    }
 
-  <section class="levels">
-    <div class="card basic">
-      <h3>🎵 BASIC</h3>
-      <p>Идеальный старт. Молодые, активные преподаватели, которые отлично находят контакт с детьми и взрослыми, особенно в начале пути. Это ваш безопасный, комфортный вход в музыку.</p>
-    </div>
-    <div class="card progressive">
-      <h3>🚀 PROGRESSIVE</h3>
-      <p>Опытные наставники, которые не только вдохновляют, но и ведут к результату. Отличный выбор для тех, кто хочет расти быстрее и увереннее, будь то хобби или профессиональное развитие.</p>
-    </div>
-    <div class="card prive">
-      <h3>👑 PRIVE</h3>
-      <p>Топ-наставники с уникальным опытом, гастрольной или преподавательской карьерой. Работа по эксклюзивной методике, индивидуальный подход, высокая вовлеченность. Идеально для тех, кто хочет максимального результата.</p>
-    </div>
-  </section>
+    td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 15px;
+      font-weight: bold;
+    }
+  }
+</style>
 
-  <section class="tariff-table">
-    <h2>Тарифы по уровням</h2>
-    <table>
+  </head>
+  <body>
+    <header>
+      <h1>Тарифы обучения</h1>
+      <p>Творческая Лаборатория Веты Гулливер</p>
+    </header><section class="quote">
+  У каждого свой творческий путь... Но он всегда правильный!
+</section>
+
+<section class="levels">
+  <div class="card basic">
+    <h2>Basic</h2>
+    <p>Оптимальный старт для тех, кто делает первые шаги. Профессиональные педагоги, комфортный темп и поддержка на каждом этапе.</p>
+  </div>
+
+  <div class="card progressive">
+    <h2>Progressive</h2>
+    <p>Больше практики, больше возможностей. Подходит тем, кто готов к регулярным занятиям и хочет расти в своём темпе под внимательным руководством.</p>
+  </div>
+
+  <div class="card prive">
+    <h2>Prive</h2>
+    <p>Максимальное внимание и индивидуальный подход. Только самые опытные наставники. Идеально для глубокой проработки и уверенного прогресса.</p>
+  </div>
+</section>
+
+<section>
+  <table>
+    <thead>
       <tr>
-        <th>Тип</th>
-        <th>Продолжительность</th>
-        <th>Basic</th>
-        <th>Progressive</th>
-        <th>Prive</th>
+        <th>Уровень</th>
+        <th>Формат</th>
+        <th>45 мин</th>
+        <th>60 мин</th>
+        <th>Парный</th>
+        <th>Групповой</th>
+        <th>Малыши</th>
+        <th>Разовое</th>
+        <th>Пробное</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Уровень">Basic</td>
+        <td data-label="Формат">Light</td>
+        <td data-label="45 мин">2200₽</td>
+        <td data-label="60 мин">2500₽</td>
+        <td data-label="Парный">3200₽</td>
+        <td data-label="Групповой">900₽</td>
+        <td data-label="Малыши">1400₽</td>
+        <td data-label="Разовое">3800₽ / 4400₽</td>
+        <td data-label="Пробное">900₽</td>
       </tr>
       <tr>
-        <td>Light</td>
-        <td>60 мин</td>
-        <td>2500₽</td>
-        <td>3400₽</td>
-        <td>3600₽</td>
+        <td data-label="Уровень">Progressive</td>
+        <td data-label="Формат">Intensive</td>
+        <td data-label="45 мин">3000₽</td>
+        <td data-label="60 мин">3600₽</td>
+        <td data-label="Парный">4500₽</td>
+        <td data-label="Групповой">1200₽</td>
+        <td data-label="Малыши">2300₽</td>
+        <td data-label="Разовое">4700₽ / 5300₽</td>
+        <td data-label="Пробное">1500₽</td>
       </tr>
       <tr>
-        <td>Intensive</td>
-        <td>60 мин</td>
-        <td>2700₽</td>
-        <td>3600₽</td>
-        <td>3900₽</td>
+        <td data-label="Уровень">Prive</td>
+        <td data-label="Формат">Individ</td>
+        <td data-label="45 мин">–</td>
+        <td data-label="60 мин">3600₽ / 3900₽</td>
+        <td data-label="Парный">5100₽ / 5500₽</td>
+        <td data-label="Групповой">–</td>
+        <td data-label="Малыши">–</td>
+        <td data-label="Разовое">6000₽</td>
+        <td data-label="Пробное">1800₽</td>
       </tr>
-      <tr>
-        <td>Пробное</td>
-        <td>—</td>
-        <td>900₽</td>
-        <td>1500₽</td>
-        <td>1800₽</td>
-      </tr>
-      <tr>
-        <td>Разовое</td>
-        <td>60 мин</td>
-        <td>4400₽</td>
-        <td>5300₽</td>
-        <td>6000₽</td>
-      </tr>
-    </table>
-  </section>
+    </tbody>
+  </table>
+</section>
 
-  <section class="how-to-choose">
-    <h2>Как выбрать уровень?</h2>
-    <p>Если вы только начинаете — начните с BASIC, это даст уверенность.  
-    Если у вас есть цель — PROGRESSIVE поможет дойти до неё быстрее.  
-    Хотите максимум или готовитесь к поступлению — PRIVE станет вашим гидом.  
-    <br><br>А мы всегда поможем выбрать и подскажем, если нужно ❤️</p>
-  </section>
+<section class="choose-level">
+  <h3>Как выбрать уровень?</h3>
+  <p>Если вы только начинаете — вам подойдёт уровень Basic. Для тех, кто уже немного продвинулся и хочет регулярности, — Progressive. Если вы хотите углублённую индивидуальную работу и максимально гибкий подход — выбирайте Prive. А если сомневаетесь — приходите на пробное занятие, и мы вместе выберем идеальный маршрут!</p>
+</section>
 
-  <footer>
-    © MUSIC.LAB, 2025
-  </footer>
-
-</body>
+  </body>
 </html>
