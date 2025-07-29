@@ -1,245 +1,172 @@
-<!DOCTYPE html><html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Тарифы | Творческая Лаборатория Веты Гулливер</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-    <style>
-      :root {
-        --main-orange: #ff6f00;
-        --lime: #6bcb77;
-        --sand: #ffe0b2;
-        --black: #000000;
-        --white: #ffffff;
-        --text-dark: #333333;
-      }* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Уровни обучения — MUSIC.LAB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=PT+Sans&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #FF6F00;
+      --green: #6BCB77;
+      --black: #000000;
+      --white: #FFFFFF;
+      --gray-text: #333333;
+      --sand: #FFE0B2;
+    }
 
-  body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--white);
-    color: var(--text-dark);
-    line-height: 1.6;
-    padding: 20px;
-  }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--white);
+      color: var(--gray-text);
+      padding: 20px;
+    }
 
-  header h1 {
-    font-size: 2.2em;
-    color: var(--main-orange);
-  }
+    h1 {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-  header p {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 1.1em;
-    color: var(--text-dark);
-    margin-top: 10px;
-  }
+    p.subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      font-family: 'PT Sans', sans-serif;
+    }
 
-  .levels {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-bottom: 50px;
-  }
-
-  .card {
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    color: var(--text-dark);
-    transition: transform 0.3s ease;
-  }
-
-  .card:hover {
-    transform: translateY(-5px);
-  }
-
-  .card h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-
-  .card p {
-    font-size: 1em;
-    font-family: 'PT Sans', sans-serif;
-  }
-
-  .basic { background-color: #fff5e6; }
-  .progressive { background-color: #e5fce8; }
-  .prive { background-color: #fce4ec; }
-
-  .quote {
-    background: var(--sand);
-    padding: 25px;
-    text-align: center;
-    border-radius: 20px;
-    font-style: italic;
-    font-size: 1.2em;
-    margin-bottom: 40px;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 50px;
-  }
-
-  th, td {
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #ddd;
-  }
-
-  th {
-    background-color: var(--main-orange);
-    color: var(--white);
-  }
-
-  td {
-    font-family: 'PT Sans', sans-serif;
-  }
-
-  .choose-level {
-    background: var(--lime);
-    padding: 30px;
-    border-radius: 20px;
-    color: var(--black);
-    margin-bottom: 40px;
-  }
-
-  .choose-level h3 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
-  }
-
-  .choose-level p {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 1em;
-  }
-
-  @media (max-width: 768px) {
-    .levels {
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
+      margin-bottom: 40px;
     }
 
-    table, thead, tbody, th, td, tr {
-      display: block;
+    .card {
+      border-radius: 16px;
+      color: var(--white);
+      padding: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
     }
 
-    th {
-      display: none;
+    .card:hover {
+      transform: translateY(-5px);
     }
 
-    td {
-      position: relative;
-      padding-left: 50%;
-      text-align: left;
-      border: none;
-      border-bottom: 1px solid #ddd;
+    .card h2 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
     }
 
-    td::before {
-      content: attr(data-label);
-      position: absolute;
-      left: 15px;
-      font-weight: bold;
+    .card p {
+      font-size: 1rem;
+      line-height: 1.5;
+      font-family: 'PT Sans', sans-serif;
     }
-  }
-</style>
 
-  </head>
-  <body>
-    <header>
-      <h1>Тарифы обучения</h1>
-      <p>Творческая Лаборатория Веты Гулливер</p>
-    </header><section class="quote">
-  У каждого свой творческий путь... Но он всегда правильный!
-</section>
+    .basic {
+      background-color: var(--orange);
+    }
 
-<section class="levels">
-  <div class="card basic">
-    <h2>Basic</h2>
-    <p>Оптимальный старт для тех, кто делает первые шаги. Профессиональные педагоги, комфортный темп и поддержка на каждом этапе.</p>
+    .progressive {
+      background-color: var(--green);
+    }
+
+    .prive {
+      background-color: var(--black);
+    }
+
+    .quote {
+      font-size: 1.2rem;
+      font-style: italic;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .how-to-choose {
+      background-color: var(--sand);
+      border-radius: 20px;
+      padding: 25px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: 'PT Sans', sans-serif;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .how-to-choose h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      text-align: center;
+      color: var(--gray-text);
+    }
+
+    .how-to-choose p {
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .quote {
+        font-size: 1rem;
+      }
+
+      .card h2 {
+        font-size: 1.3rem;
+      }
+
+      .card p {
+        font-size: 0.95rem;
+      }
+
+      .how-to-choose h3 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Творческая Лаборатория Веты Гулливер</h1>
+  <p class="subtitle">Мы верим, что каждый талант уникален. Мы создали три уровня занятий, чтобы помочь вам раскрыть свой потенциал наилучшим образом.</p>
+
+  <div class="cards">
+    <div class="card basic">
+      <h2>Basic — ничего лишнего</h2>
+      <p>Профессиональные наставники, индивидуальное расписание, участие в мероприятиях. Всё просто и эффективно — без лишнего, только творчество и прогресс.</p>
+    </div>
+
+    <div class="card progressive">
+      <h2>Progressive — для тех, кто хочет больше</h2>
+      <p>Все преимущества уровня Basic, а также: бесплатное участие в мероприятиях (2 раза в год), уроки по актерскому мастерству и сольфеджио (по 2 в месяц), 60 минут репетиционной базы в месяц. Всё включено в стоимость.</p>
+    </div>
+
+    <div class="card prive">
+      <h2>Prive — закрытый клуб для ценителей</h2>
+      <p>Максимальный уровень свободы и вдохновения. Все включено. Персональное сопровождение. Закрытые мероприятия. Выше только вдохновение.</p>
+    </div>
   </div>
 
-  <div class="card progressive">
-    <h2>Progressive</h2>
-    <p>Больше практики, больше возможностей. Подходит тем, кто готов к регулярным занятиям и хочет расти в своём темпе под внимательным руководством.</p>
+  <p class="quote">У каждого свой творческий путь... Но он всегда правильный!</p>
+
+  <div class="how-to-choose">
+    <h3>Как выбрать уровень?</h3>
+    <p>Не существует неправильного выбора — каждый уровень создан с заботой о вашем росте. Если вы только начинаете — Basic поможет сосредоточиться на главном. Хотите больше творчества и бонусов — выбирайте Progressive. А если вы стремитесь к особому подходу и максимальной свободе — вас ждёт Prive.</p>
   </div>
 
-  <div class="card prive">
-    <h2>Prive</h2>
-    <p>Максимальное внимание и индивидуальный подход. Только самые опытные наставники. Идеально для глубокой проработки и уверенного прогресса.</p>
-  </div>
-</section>
-
-<section>
-  <table>
-    <thead>
-      <tr>
-        <th>Уровень</th>
-        <th>Формат</th>
-        <th>45 мин</th>
-        <th>60 мин</th>
-        <th>Парный</th>
-        <th>Групповой</th>
-        <th>Малыши</th>
-        <th>Разовое</th>
-        <th>Пробное</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="Уровень">Basic</td>
-        <td data-label="Формат">Light</td>
-        <td data-label="45 мин">2200₽</td>
-        <td data-label="60 мин">2500₽</td>
-        <td data-label="Парный">3200₽</td>
-        <td data-label="Групповой">900₽</td>
-        <td data-label="Малыши">1400₽</td>
-        <td data-label="Разовое">3800₽ / 4400₽</td>
-        <td data-label="Пробное">900₽</td>
-      </tr>
-      <tr>
-        <td data-label="Уровень">Progressive</td>
-        <td data-label="Формат">Intensive</td>
-        <td data-label="45 мин">3000₽</td>
-        <td data-label="60 мин">3600₽</td>
-        <td data-label="Парный">4500₽</td>
-        <td data-label="Групповой">1200₽</td>
-        <td data-label="Малыши">2300₽</td>
-        <td data-label="Разовое">4700₽ / 5300₽</td>
-        <td data-label="Пробное">1500₽</td>
-      </tr>
-      <tr>
-        <td data-label="Уровень">Prive</td>
-        <td data-label="Формат">Individ</td>
-        <td data-label="45 мин">–</td>
-        <td data-label="60 мин">3600₽ / 3900₽</td>
-        <td data-label="Парный">5100₽ / 5500₽</td>
-        <td data-label="Групповой">–</td>
-        <td data-label="Малыши">–</td>
-        <td data-label="Разовое">6000₽</td>
-        <td data-label="Пробное">1800₽</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<section class="choose-level">
-  <h3>Как выбрать уровень?</h3>
-  <p>Если вы только начинаете — вам подойдёт уровень Basic. Для тех, кто уже немного продвинулся и хочет регулярности, — Progressive. Если вы хотите углублённую индивидуальную работу и максимально гибкий подход — выбирайте Prive. А если сомневаетесь — приходите на пробное занятие, и мы вместе выберем идеальный маршрут!</p>
-</section>
-
-  </body>
+</body>
 </html>
