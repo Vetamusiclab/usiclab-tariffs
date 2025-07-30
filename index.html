@@ -1,257 +1,274 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Тарифы — MUSIC.LAB</title>
-    <link href="style.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=PT+Sans&display=swap" rel="stylesheet"/>
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Roboto', sans-serif;
-        background-color: #fff;
-        color: #333;
-        line-height: 1.6;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Уровни обучения | Творческая Лаборатория Веты Гулливер</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      padding: 20px 20px 10px;
+      text-align: center;
+    }
 
-      header {
-        background-color: #FF6F00;
-        color: #fff;
-        padding: 20px 40px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
 
-      header img {
-        height: 60px;
-      }
+    .logo-container img {
+      height: 50px;
+      margin-right: 12px;
+    }
 
-      header h1 {
-        margin: 0;
-        font-size: 1.8rem;
-        font-weight: 700;
-      }
+    .logo-container span {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #000;
+      font-family: 'PT Sans', sans-serif;
+    }
 
-      .tagline {
-        text-align: center;
-        font-size: 1.3rem;
-        margin: 40px 20px 60px;
-        font-family: 'PT Sans', sans-serif;
-        color: #555;
-        font-style: italic;
-        position: relative;
-      }
+    h1.tagline {
+      font-size: 1.5em;
+      font-style: italic;
+      font-weight: 500;
+      color: #444;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
 
-      .tagline::before,
-      .tagline::after {
-        content: "—";
-        margin: 0 10px;
-        color: #6BCB77;
-      }
+    p.subtitle {
+      font-size: 1.2em;
+      font-family: 'PT Sans', sans-serif;
+      margin-bottom: 40px;
+      color: #555;
+    }
 
-      .cards {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        max-width: 1000px;
-        margin: 0 auto 60px;
-        padding: 0 20px;
-      }
+    section.cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 0 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
+    .card {
+      border-radius: 20px;
+      padding: 30px 25px;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .basic {
+      background-color: #FF6F00;
+    }
+
+    .progressive {
+      background-color: #6BCB77;
+    }
+
+    .prive {
+      background-color: #000;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .card ul li {
+      margin: 10px 0;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .card ul li::before {
+      content: "•";
+      color: #fff;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .cta {
+      text-align: center;
+      font-size: 1.3em;
+      margin: 60px 20px 30px;
+      font-weight: 500;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px auto 60px;
+      max-width: 960px;
+      font-size: 0.95em;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    table th, table td {
+      padding: 14px 16px;
+      text-align: center;
+    }
+
+    table thead th {
+      background-color: #FFECB3;
+      color: #000;
+      font-weight: 600;
+    }
+
+    table tbody tr:nth-child(even) {
+      background-color: #fff8ee;
+    }
+
+    table tbody td:first-child {
+      font-weight: bold;
+      text-align: left;
+      background-color: #fff3e0;
+      color: #444;
+    }
+
+    footer {
+      background-color: #f2f2f2;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.95em;
+    }
+
+    footer h3 {
+      color: #FF6F00;
+      margin-bottom: 15px;
+    }
+
+    @media (min-width: 768px) {
+      section.cards {
+        flex-direction: row;
+      }
       .card {
-        border-radius: 20px;
-        padding: 30px 25px;
-        color: #fff;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        flex: 1;
       }
+    }
+  </style>
+</head>
+<body>
 
-      .card h2 {
-        margin-top: 0;
-        font-size: 1.8rem;
-      }
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Логотип">
+      <span>Творческая Лаборатория Веты Гулливер</span>
+    </div>
+    <h1 class="tagline">У каждого свой творческий путь —<br>и он всегда правильный</h1>
+    <p class="subtitle">Выбирайте уровень занятий, который подходит именно вам</p>
+  </header>
 
-      .card ul {
-        margin-top: 20px;
-        padding-left: 20px;
-        list-style: none;
-      }
+  <section class="cards">
+    <div class="card basic">
+      <h2>Basic</h2>
+      <ul>
+        <li>Ничего лишнего</li>
+        <li>Профессиональные наставники</li>
+        <li>Индивидуальное расписание</li>
+        <li>Участие в мероприятиях</li>
+      </ul>
+    </div>
+    <div class="card progressive">
+      <h2>Progressive</h2>
+      <ul>
+        <li>Всё, что в Basic</li>
+        <li>Бесплатное участие в мероприятиях (2 раза в год)</li>
+        <li>Бесплатные уроки по актёрскому мастерству и сольфеджио (2 раза в месяц)</li>
+        <li>60 минут репетиционной базы в месяц</li>
+      </ul>
+    </div>
+    <div class="card prive">
+      <h2>Prive</h2>
+      <ul>
+        <li>Закрытый клуб для ценителей</li>
+        <li>Все включено</li>
+        <li>Выше только вдохновение</li>
+      </ul>
+    </div>
+  </section>
 
-      .card ul li::before {
-        content: "• ";
-        color: #fff;
-        font-weight: bold;
-        margin-right: 5px;
-      }
+  <p class="cta">Мы верим, что каждый может раскрыть свой потенциал — на любом уровне 💫</p>
 
-      .basic {
-        background-color: #FF6F00;
-      }
+  <table>
+    <thead>
+      <tr>
+        <th>Тип занятия</th>
+        <th>Basic</th>
+        <th>Progressive</th>
+        <th>Prive</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Индивидуально, 45 мин</td>
+        <td>2200₽ / 2400₽</td>
+        <td>2800₽ / 3000₽</td>
+        <td>–</td>
+      </tr>
+      <tr>
+        <td>Индивидуально, 60 мин</td>
+        <td>2500₽ / 2700₽</td>
+        <td>3400₽ / 3600₽</td>
+        <td>3600₽ / 3900₽</td>
+      </tr>
+      <tr>
+        <td>Парное, 2 чел., 60 мин</td>
+        <td>3200₽ / 3600₽</td>
+        <td>4100₽ / 4500₽</td>
+        <td>5100₽ / 5500₽</td>
+      </tr>
+      <tr>
+        <td>Малыши до 6 лет, 30 мин</td>
+        <td>1400₽ / 1700₽</td>
+        <td>2000₽ / 2300₽</td>
+        <td>–</td>
+      </tr>
+      <tr>
+        <td>Групповое, 45 мин</td>
+        <td>900₽ / 1200₽</td>
+        <td>900₽ / 1200₽</td>
+        <td>–</td>
+      </tr>
+      <tr>
+        <td>Разовое</td>
+        <td>3800₽ / 4400₽</td>
+        <td>4700₽ / 5300₽</td>
+        <td>6000₽</td>
+      </tr>
+      <tr>
+        <td>Пробное</td>
+        <td>900₽</td>
+        <td>1500₽</td>
+        <td>1800₽</td>
+      </tr>
+    </tbody>
+  </table>
 
-      .progressive {
-        background-color: #6BCB77;
-      }
+  <footer>
+    <h3>Как выбрать уровень?</h3>
+    <p>Не переживайте — вы всегда сможете перейти на другой тариф. Просто выберите тот, который подходит вам сейчас, а дальше мы поможем сориентироваться 💛</p>
+  </footer>
 
-      .prive {
-        background-color: #000;
-      }
-
-      .pricing-table {
-        max-width: 1000px;
-        margin: 0 auto 60px;
-        padding: 0 20px;
-        overflow-x: auto;
-      }
-
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 0.95rem;
-        margin-top: 30px;
-      }
-
-      th, td {
-        padding: 12px 16px;
-        border: 1px solid #ccc;
-        text-align: center;
-      }
-
-      th {
-        background-color: #FFE0B2;
-        font-weight: bold;
-      }
-
-      tr:nth-child(even) {
-        background-color: #fdf8f3;
-      }
-
-      @media (max-width: 768px) {
-        .cards {
-          flex-direction: column;
-        }
-
-        header {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 10px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Творческая Лаборатория Веты Гулливер</h1>
-      <img src="logo.png" alt="Логотип MUSIC.LAB" />
-    </header>
-
-    <div class="tagline">у каждого свой творческий путь... но он всегда правильный</div>
-
-    <section class="cards">
-      <div class="card basic">
-        <h2>Basic — ничего лишнего</h2>
-        <ul>
-          <li>Проффесиональные наставники</li>
-          <li>Индивидуальное расписание</li>
-          <li>Участие в мероприятиях</li>
-        </ul>
-      </div>
-      <div class="card progressive">
-        <h2>Progressive — для тех, кто хочет больше</h2>
-        <ul>
-          <li>Всё, что в Basic</li>
-          <li>Бесплатное участие в мероприятиях (2 раза в год)</li>
-          <li>Бесплатные уроки по актёрскому мастерству и сольфеджио (по 2 урока в месяц)</li>
-          <li>60 минут репетиционной базы в месяц</li>
-        </ul>
-      </div>
-      <div class="card prive">
-        <h2>Prive — закрытый клуб для ценителей</h2>
-        <ul>
-          <li>Все включено</li>
-          <li>Выше только вдохновение</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="pricing-table">
-      <h2 style="text-align:center; font-size:1.5rem; margin-bottom:20px;">Тарифы на занятия</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Тип</th>
-            <th>Продолжительность</th>
-            <th>Basic</th>
-            <th>Progressive</th>
-            <th>Prive</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Light</td>
-            <td>45 мин</td>
-            <td>2200₽</td>
-            <td>2800₽</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>Light</td>
-            <td>60 мин</td>
-            <td>2500₽</td>
-            <td>3400₽</td>
-            <td>3600₽</td>
-          </tr>
-          <tr>
-            <td>Intensive</td>
-            <td>45 мин</td>
-            <td>2400₽</td>
-            <td>3000₽</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>Intensive</td>
-            <td>60 мин</td>
-            <td>2700₽</td>
-            <td>3600₽</td>
-            <td>3900₽</td>
-          </tr>
-          <tr>
-            <td>Парный</td>
-            <td>60 мин</td>
-            <td>3200₽</td>
-            <td>4100₽</td>
-            <td>5100₽</td>
-          </tr>
-          <tr>
-            <td>Малыши</td>
-            <td>30 мин</td>
-            <td>1400₽</td>
-            <td>2000₽</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>Групповое</td>
-            <td>45 мин</td>
-            <td>900₽</td>
-            <td>900₽</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>Разовое</td>
-            <td>60 мин</td>
-            <td>4400₽</td>
-            <td>5300₽</td>
-            <td>6000₽</td>
-          </tr>
-          <tr>
-            <td>Пробное</td>
-            <td>—</td>
-            <td>900₽</td>
-            <td>1500₽</td>
-            <td>1800₽</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-  </body>
+</body>
 </html>
