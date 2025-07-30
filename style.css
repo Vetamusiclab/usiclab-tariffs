@@ -106,3 +106,22 @@ td, th {
   border: 1px solid #ccc;
   text-align: center;
 }
+/* === Цветовая подложка для карточек тарифов === */
+.tariff-card.light {
+  background-color: #FFF3E0; /* мягкий песочный */
+}
+
+.tariff-card.intensive {
+  background-color: #E8F5E9; /* светло-салатовый */
+}
+
+.tariff-card.prive {
+  background-color: #F3E5F5; /* светлая сирень, ассоциируется с премиумом */
+}
+
+.tariff-card.light,
+.tariff-card.intensive,
+.tariff-card.prive {
+  border-radius: 16px;
+  padding: 16px;
+}
