@@ -1,135 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=PT+Sans&display=swap');  
+  
+:root {  
+  --orange: #FF6F00;  
+  --lime: #6BCB77;  
+  --black: #000000;  
+  --white: #ffffff;  
+  --sand: #FFE0B2;  
+  --gray: #333333;  
+}  
+  
+* {  
+  box-sizing: border-box;  
+  margin: 0;  
+  padding: 0;  
+}  
+  
+body {  
+  font-family: 'Roboto', sans-serif;  
+  background-color: var(--white);  
+  color: var(--gray);  
+  padding: 2rem;  
+  line-height: 1.6;  
+}  
+  
+header {  
+  text-align: center;  
+  margin-bottom: 2rem;  
+}  
+  
+header h1 {  
+  font-size: 2.5rem;  
+  color: var(--orange);  
+}  
+  
+header .subtitle {  
+  font-family: 'PT Sans', sans-serif;  
+  font-size: 1.2rem;  
+  margin-top: 0.5rem;  
+}  
+  
+.cards {  
+  display: flex;  
+  gap: 1rem;  
+  justify-content: center;  
+  margin-bottom: 3rem;  
+}  
+  
+.card {  
+  flex: 1;  
+  border-radius: 1rem;  
+  padding: 1.5rem;  
+  color: var(--black);  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+  text-align: center;  
+}  
+  
+.card h2 {  
+  font-size: 1.5rem;  
+  margin-bottom: 0.5rem;  
+}  
+  
+.card .icon {  
+  font-size: 2rem;  
+  margin-top: 1rem;  
+}  
+  
+.card.basic {  
+  background-color: var(--sand);  
+}  
+  
+.card.progressive {  
+  background-color: #E0F7FA;  
+}  
+  
+.card.prive {  
+  background-color: #F3E5F5;  
+}  
+  
+.table {  
+  max-width: 800px;  
+  margin: 0 auto;  
+}  
+  
+.table h2 {  
+  text-align: center;  
+  font-size: 1.8rem;  
+  color: var(--orange);  
+  margin-bottom: 1rem;  
+}  
+  
+table {  
+  width: 100%;  
+  border-collapse: collapse;  
+  font-size: 1rem;  
+}  
+  
+thead {  
+  background-color: var(--orange);  
+  color: var(--white);  
+}  
+  
+td, th {  
+  padding: 0.75rem;  
+  border: 1px solid #ccc;  
+  text-align: center;  
+}  
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=PT+Sans&display=swap');
+/* 💡 Стили для карточек тарифов с улучшенными цветами */  
 
-:root {
-  --orange: #FF6F00;
-  --lime: #6BCB77;
-  --black: #000000;
-  --white: #ffffff;
-  --sand: #FFE0B2;
-  --gray: #333333;
-}
+.card.basic {  
+  background: linear-gradient(to bottom right, #FF8C42, #FFAB64);  
+  color: #fff;  
+  box-shadow: 0 4px 8px rgba(255, 140, 66, 0.2);  
+}  
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+.card.progressive {  
+  background: linear-gradient(to bottom right, #58B368, #7ED49D);  
+  color: #fff;  
+  box-shadow: 0 4px 8px rgba(88, 179, 104, 0.2);  
+}  
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--white);
-  color: var(--gray);
-  padding: 2rem;
-  line-height: 1.6;
-}
+.card.prive {  
+  background: linear-gradient(to bottom right, #000000, #1A1A1A);  
+  color: #fff;  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);  
+  border: 1px solid #333;  
+}  
 
-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  color: var(--orange);
-}
-
-header .subtitle {
-  font-family: 'PT Sans', sans-serif;
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-}
-
-.cards {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 3rem;
-}
-
-.card {
-  flex: 1;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  color: var(--black);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.card .icon {
-  font-size: 2rem;
-  margin-top: 1rem;
-}
-
-.card.basic {
-  background-color: var(--sand);
-}
-
-.card.progressive {
-  background-color: #E0F7FA;
-}
-
-.card.prive {
-  background-color: #F3E5F5;
-}
-
-.table {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.table h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  color: var(--orange);
-  margin-bottom: 1rem;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 1rem;
-}
-
-thead {
-  background-color: var(--orange);
-  color: var(--white);
-}
-
-td, th {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  text-align: center;
-}
-padding: 16px;
-}
-/* 💡 Улучшенные стили карточек с премиальными цветами */
-.card.basic {
-  background: linear-gradient(to bottom right, #FF8C42, #FFAB64);
-  color: #fff;
-  box-shadow: 0 4px 8px rgba(255, 140, 66, 0.2);
-}
-
-.card.progressive {
-  background: linear-gradient(to bottom right, #58B368, #7ED49D);
-  color: #fff;
-  box-shadow: 0 4px 8px rgba(88, 179, 104, 0.2);
-}
-
-.card.prive {
-  background: linear-gradient(to bottom right, #000000, #1A1A1A);
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  border: 1px solid #333;
-}
-
-.card.prive h2 {
-  color: #FFD700; /* Золотой оттенок */
-  font-weight: 600;
-  text-shadow: 0 0 4px rgba(255, 215, 0, 0.5);
+.card.prive h2 {  
+  color: #FFD700; /* Золотой оттенок */  
+  font-weight: 600;  
+  text-shadow: 0 0 4px rgba(255, 215, 0, 0.5);  
 }
