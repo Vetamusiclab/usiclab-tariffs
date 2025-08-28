@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Уровни обучения | Творческая Лаборатория Веты Гулливер</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=PT+Sans&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=PT+Sans&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -40,7 +40,7 @@
     }
     h1.tagline {
       font-size: 1.5em;
-      font-family: 'Dancing Script', cursive;
+      font-family: 'Marck Script', cursive; /* ✅ заменили на Marck Script */
       font-weight: 500;
       color: #444;
       margin-bottom: 10px;
@@ -108,33 +108,12 @@
       margin: 60px 20px 30px;
       font-weight: 500;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px auto 40px;
-      max-width: 960px;
-      font-size: 0.95em;
+    .abonement-img {
+      display: block;
+      margin: 30px auto;
+      max-width: 90%;
       border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    table th, table td {
-      padding: 14px 16px;
-      text-align: center;
-    }
-    table thead th {
-      background-color: #FFECB3;
-      color: #000;
-      font-weight: 600;
-    }
-    table tbody tr:nth-child(even) {
-      background-color: #fff8ee;
-    }
-    table tbody td:first-child {
-      font-weight: bold;
-      text-align: left;
-      background-color: #fff3e0;
-      color: #444;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     footer {
       background-color: #f2f2f2;
@@ -198,44 +177,10 @@
 
   <p class="cta">Мы верим, что каждый может раскрыть свой потенциал — на любом уровне 💫</p>
 
-  <!-- Basic Prices -->
-  <table>
-    <thead><tr><th colspan="2">Basic (Light / Intensive)</th></tr></thead>
-    <tbody>
-      <tr><td>Индивидуально, 45 мин</td><td>2200₽ / 2400₽</td></tr>
-      <tr><td>Индивидуально, 60 мин</td><td>2500₽ / 2700₽</td></tr>
-      <tr><td>Парное, 60 мин</td><td>3200₽ / 3600₽</td></tr>
-      <tr><td>Малыши до 6 лет, 30 мин</td><td>1400₽ / 1700₽</td></tr>
-      <tr><td>Групповое, 45 мин</td><td>900₽ / 1200₽</td></tr>
-      <tr><td>Разовое</td><td>3800₽ / 4400₽</td></tr>
-      <tr><td>Пробное</td><td>900₽</td></tr>
-    </tbody>
-  </table>
-
-  <!-- Progressive Prices -->
-  <table>
-    <thead><tr><th colspan="2">Progressive (Light / Intensive)</th></tr></thead>
-    <tbody>
-      <tr><td>Индивидуально, 45 мин</td><td>2800₽ / 3000₽</td></tr>
-      <tr><td>Индивидуально, 60 мин</td><td>3400₽ / 3600₽</td></tr>
-      <tr><td>Парное, 60 мин</td><td>4100₽ / 4500₽</td></tr>
-      <tr><td>Малыши до 6 лет, 30 мин</td><td>2000₽ / 2300₽</td></tr>
-      <tr><td>Групповое, 45 мин</td><td>900₽ / 1200₽</td></tr>
-      <tr><td>Разовое</td><td>4700₽ / 5300₽</td></tr>
-      <tr><td>Пробное</td><td>1500₽</td></tr>
-    </tbody>
-  </table>
-
-  <!-- Prive Prices -->
-  <table>
-    <thead><tr><th colspan="2">Prive (Light / Intensive)</th></tr></thead>
-    <tbody>
-      <tr><td>Индивидуально, 60 мин</td><td>3600₽ / 3900₽</td></tr>
-      <tr><td>Парное, 60 мин</td><td>5100₽ / 5500₽</td></tr>
-      <tr><td>Разовое</td><td>6000₽</td></tr>
-      <tr><td>Пробное</td><td>1800₽</td></tr>
-    </tbody>
-  </table>
+  <!-- Вместо таблиц вставляем картинки -->
+  <img src="abonement-basic.jpg" alt="Абонементы Basic" class="abonement-img">
+  <img src="abonement-progressive.jpg" alt="Абонементы Progressive" class="abonement-img">
+  <img src="abonement-prive.jpg" alt="Абонементы Prive" class="abonement-img">
 
   <footer>
     <h3>Как выбрать уровень?</h3>
